@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlayer : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     [SerializeField] bool isMove;
-    // Start is called before the first frame update
+    [SerializeField] float speed;
+    [SerializeField] Vector3 diraction;
+
     void Start()
     {
         
@@ -17,6 +19,6 @@ public class MovePlayer : MonoBehaviour
     private void FixedUpdate()
     {
         if (isMove)
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(0.5f, 0, 0));
+            transform.Translate(diraction.normalized * speed);
     }
 }

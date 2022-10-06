@@ -8,21 +8,27 @@ public class inputControler : MonoBehaviour
     [Header("Game Element")]
     [SerializeField] Rigidbody2D player;
 
+    [Space]
+    [SerializeField] public bool isInput = false;
+
     int gravity;
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (isInput) 
         {
-            if (player.gravityScale == 2)
+            if (Input.GetMouseButtonDown(0))
             {
-                player.gravityScale = -2;
+                if (player.gravityScale == 3)
+                {
+                    player.gravityScale = -3;
+                }
+                else
+                {
+                    player.gravityScale = 3;
+                }
             }
-            else 
-            {
-                player.gravityScale = 2;
-            }
-        }       
+        }
     }
 }
