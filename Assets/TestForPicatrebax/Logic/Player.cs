@@ -46,8 +46,6 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-   
-
     public void OnCollisionEnter2D(Collision2D collision)
     {
         score++;

@@ -6,15 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField] bool isMove;
     [SerializeField] float speed;
-    [SerializeField] Vector3 diraction;
-
-    void Start()
-    {
-        
-    }
-
-   
-   
+    [SerializeField] Vector3 diraction;   
 
     private void FixedUpdate()
     {
